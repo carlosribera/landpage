@@ -1,0 +1,49 @@
+<head>
+    {% load static %}
+    <meta charset="UTF-8">
+    <title>Tu Empresa de Desarrollo de Software</title>
+
+    <!-- CSS
+    ================================================== -->
+    <link rel="stylesheet" href="{% static 'css/forms.css' %}">
+    <link rel="stylesheet" href="{% static 'css/base.css' %}">
+    <link rel="stylesheet" href="{% static 'css/vendor.css' %}">
+    <link rel="stylesheet" href="{% static 'css/main.css' %}">
+
+    <!-- favicons
+    ================================================== -->
+    <link rel="shortcut icon" href="{% static 'favicon.ico' %}" type="image/x-icon">
+    <link rel="icon" href="{% static 'favicon.ico' %}" type="image/x-icon"><!-- script
+        ================================================== -->
+    <script src="{% static '/js/modernizr.js' %}"></script>
+    <script src="{% static '/js/pace.min.js' %}"></script>
+
+
+</head>
+
+<body id="top">
+
+    <!-- preloader
+    ================================================== -->
+    <div id="preloader">
+        <div id="loader" class="dots-jump">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+    </div>
+    {% include 'layouts/navbar.html' %}
+
+
+    {% block content %}
+    {% endblock %}
+
+
+    <!-- Java Script
+        ================================================== -->
+    <script src="{% static 'js/jquery-3.2.1.min.js' %}"></script>
+    <script src="{% static 'js/plugins.js' %}"></script>
+    <script src="{% static 'js/main.js' %}"></script>
+</body>
+
+</html>

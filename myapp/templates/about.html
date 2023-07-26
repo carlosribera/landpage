@@ -1,0 +1,35 @@
+<!-- about
+    ================================================== -->
+<section id="about" class="s-about target-section">
+
+    <div class="row section-header has-bottom-sep" data-aos="fade-up">
+        <div class="col-full">
+            <h1 class="display-1">
+                Transformando ideas en soluciones tecnológica.
+            </h1>
+            <p class="lead">
+
+                Nuestra empresa desarrolladora de software es una compañía dedicada a ofrecer soluciones tecnológicas
+                innovadoras y a medida para empresas de diversos sectores.
+            </p>
+        </div>
+    </div> <!-- end section-header -->
+
+    <div class="row wide about-desc" data-aos="fade-up">
+
+        <div class="col-full slick-slider about-desc__slider">
+
+            {% for about in abouts %}
+            <div class="about-desc__slide">
+                <h3 class="item-title">{{about.title}}</h3>
+                <p>
+                    {{about.description}}
+                </p>
+            </div>
+            {% endfor %}
+            
+        </div> <!-- end about-desc__slider -->
+
+    </div> <!-- end about-desc -->
+
+</section> <!-- end s-about -->
