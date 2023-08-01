@@ -1,15 +1,398 @@
 {% extends 'layouts/base.html' %}
-
+{% load static %}
 {% block content %}
 
-{% include 'home.html' %}
+<!-- home
+    ================================================== -->
+<section id="home" class="s-home target-section" data-parallax="scroll"
+    data-image-src="{% static 'images/hero-bg.jpg' %}" data-natural-width=3000 data-natural-height=2000
+    data-position-y=center>
 
-{% include 'about.html' %}
+    <div class="shadow-overlay"></div>
 
-{% include 'services.html' %}
+    <div class="home-content">
 
-{% include 'portfolio.html' %}
+        <div class="row home-content__main">
 
-{% include 'contacto.html' %}
+            <div class="home-content__left">
+                <h1>
+                    Soluciones <br>
+                    a tu medida.
+                </h1>
+
+                <h3>
+                    El objetivo de nuestra empresa de desarrollo de software es proporcionar soluciones tecnológicas
+                    personalizadas,
+                    innovadoras y de calidad que satisfagan las necesidades de todos nuestros clientes.
+                </h3>
+
+                <div class="home-content__btn-wrap">
+                    <a href="#download" class="btn btn--primary home-content__btn smoothscroll">
+                        Registrate
+                    </a>
+                </div>
+            </div> <!-- end home-content__left-->
+
+            <div class="home-content__right">
+                <img src="{% static 'images/hero-app-screens-800.png' %}"
+                    srcset="{% static 'images/hero-app-screens-800.png' %} 1x, {% static 'images/hero-app-screens-1600.png' %} 2x">
+            </div> <!-- end home-content__right -->
+
+        </div> <!-- end home-content__main -->
+
+        <ul class="home-content__social">
+            <li><a href="#0">Facebook</a></li>
+            <li><a href="#0">twitter</a></li>
+            <li><a href="#0">Instagram</a></li>
+        </ul>
+
+    </div> <!-- end home-content -->
+
+    <a href="#about" class="home-scroll smoothscroll">
+        <span class="home-scroll__text">Scroll</span>
+        <span class="home-scroll__icon"></span>
+    </a>
+
+</section> <!-- end s-home -->
+
+<!-- about
+    ================================================== -->
+<section id="about" class="s-about target-section">
+
+    <div class="row section-header has-bottom-sep" data-aos="fade-up">
+        <div class="col-full">
+            <h1 class="display-1">
+                Transformando ideas en soluciones tecnológica.
+            </h1>
+            <p class="lead">
+                Nuestra empresa desarrolladora de software es una compañía dedicada a ofrecer soluciones tecnológicas
+                innovadoras y a medida para empresas de diversos sectores.
+            </p>
+        </div>
+    </div> <!-- end section-header -->
+
+    <div class="row wide about-desc" data-aos="fade-up">
+
+        <div class="col-full slick-slider about-desc__slider">
+
+            {% for about in abouts %}
+            <div class="about-desc__slide">
+                <h3 class="item-title">{{about.title}}</h3>
+                <p>{{about.description}}</p>
+            </div>
+            {% endfor %}
+
+        </div> <!-- end about-desc__slider -->
+
+    </div> <!-- end about-desc -->
+
+</section> <!-- end s-about -->
+
+
+
+<!-- about-how
+    ================================================== -->
+<section id="about-how" class="s-about-how">
+
+    <div class="row">
+        <div class="col-full video-bg" data-aos="fade-up">
+
+            <div class="shadow-overlay"></div>
+
+            <a class="btn-video" href="https://player.vimeo.com/video/14592941?color=00a650&title=0&byline=0&portrait=0"
+                data-lity>
+                <span class="video-icon"></span>
+            </a>
+
+            <div class="stats">
+                <div class="item-stats">
+                    <span class="item-stats__num">
+                        3.1M
+                    </span>
+                    <span class="item-stats__title">
+                        Downloads
+                    </span>
+                </div> <!-- end item-stats -->
+                <div class="item-stats">
+                    <span class="item-stats__num">
+                        24K
+                    </span>
+                    <span class="item-stats__title">
+                        Positive Reviews
+                    </span>
+                </div> <!-- end item-stats -->
+            </div>
+        </div> <!-- end video-bg -->
+    </div>
+
+    <div class="row process-wrap">
+
+        <h2 class="display-2 text-center" data-aos="fade-up">Como trabajamos?</h2>
+
+        <div class="process" data-aos="fade-up">
+            <div class="process__steps block-1-2 block-tab-full group">
+
+                <div class="col-block step">
+                    <h3 class="item-title">Necesidades</h3>
+                    <p>Lo primero es escuchar atentamente al cliente y comprender sus requisitos y expectativas para el
+                        software. Realiza reuniones iniciales y entrevistas para aclarar todas las especificaciones y
+                        objetivos del proyecto.
+                    </p>
+                </div>
+
+                <div class="col-block step">
+                    <h3 class="item-title">comunicación clara</h3>
+                    <p>Mantén una comunicación abierta y transparente con el cliente en todo momento. Utiliza diferentes
+                        canales de comunicación, como reuniones presenciales, correos electrónicos o llamadas
+                        telefónicas, para mantenerlos informados sobre el progreso del proyecto y para obtener
+                        retroalimentación regular.
+                    </p>
+                </div>
+
+                <div class="col-block step">
+                    <h3 class="item-title">Documentar los requisitos</h3>
+                    <p>Es fundamental documentar todos los requisitos acordados en un documento formal, como un alcance
+                        del proyecto o una propuesta técnica. Esto asegura que ambos estén alineados y tengan una
+                        referencia clara durante todo el proceso de desarrollo.
+                    </p>
+                </div>
+
+                <div class="col-block step">
+                    <h3 class="item-title">Establecermos plazos claros</h3>
+                    <p>Divide el proyecto en hitos o etapas y establece plazos realistas para cada una. Esto ayudará a mantener el progreso en el camino correcto y permitirá al cliente ver el avance de manera incremental.
+                    </p>
+                </div>
+
+                <div class="col-block step">
+                    <h3 class="item-title">Mostramos prototipos y avances tempranos</h3>
+                    <p>Si es posible, proporciona al cliente prototipos o versiones tempranas del software para que pueda visualizar y experimentar cómo se verá y funcionará. Esto facilita la retroalimentación temprana y ayuda a evitar sorpresas más adelante en el proceso.
+                    </p>
+                </div>
+
+                <div class="col-block step">
+                    <h3 class="item-title">Obtener retroalimentación y ajustar</h3>
+                    <p> Escucha atentamente la retroalimentación del cliente y realiza ajustes según sea necesario. Asegúrate de que las expectativas del cliente se cumplan y de que el software se ajuste a sus necesidades.
+                    </p>
+                </div>
+
+                <div class="col-block step">
+                    <h3 class="item-title">Probar exhaustivamente</h3>
+                    <p>Antes de entregar el producto final, realiza pruebas rigurosas para asegurarte de que el software sea estable, seguro y cumpla con los requisitos establecidos.
+                    </p>
+                </div>
+
+                <div class="col-block step">
+                    <h3 class="item-title">Ofrecemos soporte y capacitación</h3>
+                    <p>Después de entregar el software, proporciona soporte técnico y capacitación para el cliente, asegurándote de que comprendan cómo utilizar el software y estén satisfechos con el producto final.
+                    </p>
+                </div>
+
+            </div> <!-- end process__steps -->
+        </div> <!-- end process -->
+    </div> <!-- end about-how -->
+
+</section> <!-- end s-about-how -->
+
+<!-- services
+    ================================================== -->
+<section id="services" class="s-features target-section">
+
+    <div class="row section-header has-bottom-sep" data-aos="fade-up">
+        <div class="col-full">
+            <h1 class="display-1">
+                Pide tu software con las caracteristicas que desees.
+            </h1>
+            <p class="lead">
+                El objetivo fundamental es comprender las necesidades del cliente y desarrollar soluciones de software
+                que cumplan con sus requisitos específicos.
+            </p>
+        </div>
+    </div> <!-- end section-header -->
+
+    <div class="row features block-1-3 block-m-1-2">
+
+
+        {% for service in services %}
+        <div class="col-block item-feature" data-aos="fade-up">
+            <div class="item-feature__icon">
+                <i class="icon-layers"></i>
+            </div>
+            <div class="item-feature__text">
+                <h3 class="item-title">{{service.title}}</h3>
+                <p>{{service.description}}</p>
+            </div>
+        </div>
+        {% endfor %}
+        <!--     
+                
+                        <i class="icon-upload"></i>
+                    
+                        <i class="icon-video-camera"></i>
+                        
+                        <i class="icon-shield"></i>
+                        
+                        <i class="icon-chat"></i>
+                        
+                        <i class="icon-wallet"></i>
+                        
+            -->
+</section>
+
+<!-- portfolio
+    ================================================== -->
+<section id="portfolio" class="s-download target-section">
+
+    <div class="row section-header align-center" data-aos="fade-up">
+        <div class="col-full">
+            <h1 class="display-1">
+                Únase a nuestra comunidad de más de 3,000,000 usuarios.
+            </h1>
+            <p class="lead">
+                Puedes ver Nuestros proyectos realizados con mayor demanda de mercado
+            </p>
+        </div>
+    </div> <!-- end section-header -->
+
+    <div class="row" style="margin-bottom: 30px;">
+        <div class="col-full text-center">
+            <ul class="download-badges" data-aos="fade-up">
+                <li><a href="https://github.com/carlosribera" title="" class="badge-appstore">App Store</a></li>
+                <li><a href="#0" title="" class="badge-googleplay">Play Store</a></li>
+            </ul>
+        </div>
+    </div>
+
+</section> <!-- end s-download -->
+
+<section id="home" class="s-home target-section" data-parallax="scroll"
+    data-image-src="{% static 'images/hero-bg.jpg' %}" data-natural-width=3000 data-natural-height=2000
+    data-position-y=center>
+
+    <div class="shadow-overlay"></div>
+
+    <div class="home-content">
+
+        {% for portfolio in portfolios %}
+        <div class="row home-content__main">
+
+            <div class="home-content__left">
+                <h1>{{portfolio.title}}</h1>
+
+                <h3>{{portfolio.description}}</h3>
+
+                <div class="home-content__btn-wrap">
+                    <a href="#download" class="btn btn--primary home-content__btn smoothscroll">
+                        Mas detalles
+                    </a>
+                </div>
+            </div> <!-- end home-content__left-->
+
+            <div class="home-content__right">
+                <img src="{{portfolio.image.url}}" srcset="{{portfolio.image.url}} 1x, {{portfolio.image.url}} 2x">
+            </div> <!-- end home-content__right -->
+
+        </div> <!-- end home-content__main -->
+
+        {% endfor %}
+    </div> <!-- end home-content -->
+
+</section> <!-- end s-home -->
+
+
+<!-- footer================================================= -->
+<footer id="contact" class="s-footer footer target-section">
+
+    <div class="row section-header align-center">
+        <div class="col-full">
+            <h1 class="display-1">
+                Mantente en contacto...
+            </h1>
+            <p class="lead">
+                Suscríbete para recibir actualizaciones, ofertas especiales y otras cosas increíbles.
+            </p>
+        </div>
+    </div> <!-- end section-header -->
+
+    <div class="row footer__top">
+
+        <div class="col-full footer__subscribe end">
+            <div class="subscribe-form">
+                <form method="POST" class="form">
+                    {% csrf_token %}
+                    {{form.as_p}}
+                    <button>
+                        Save
+                    </button>
+                </form>
+            </div>
+        </div>
+
+    </div> <!-- end footer__top -->
+
+    <div class="row footer__bottom">
+
+        <div class="footer__about col-five tab-full left">
+
+            <h4>About AndSoft.</h4>
+
+            <p>
+                El objetivo de nuestra empresa de desarrollo de software es proporcionar soluciones
+                tecnológicas
+                personalizadas,
+                innovadoras y de calidad que satisfagan las necesidades del cliente,
+                cumplan con los plazos y presupuestos establecidos, y generen satisfacción a largo plazo.
+            </p>
+
+            <ul class="footer__social">
+                <li><a href="#0"><i class="fab fa-facebook-f" aria-hidden="true"></i></a></li>
+                <li><a href="#0"><i class="fab fa-twitter" aria-hidden="true"></i></a></li>
+                <li><a href="#0"><i class="fab fa-instagram" aria-hidden="true"></i></a></li>
+            </ul>
+        </div>
+
+        <div class="col-five md-seven tab-full right end">
+            <div class="row">
+
+                <div class="footer__site-links col-five mob-full">
+                    <h4>Links del sitio</h4>
+
+                    <ul class="footer__site-links">
+                        <li><a href="#home" class="smoothscroll">Principal</a></li>
+                        <li><a href="#about" class="smoothscroll">Nosostros</a></li>
+                        <li><a href="#services" class="smoothscroll">Servicios</a></li>
+                        <li><a href="#portfolio" class="smoothscroll">Portafolio</a></li>
+                        <li><a href="#0">Privacy Policy</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer__contact col-seven mob-full">
+                    <h4>Contact Us.</h4>
+
+                    <p>
+                        Phone: (+591) 713 90665 <br>
+                        Fax: (+63) 555 0100
+                    </p>
+                    <p>
+                        ¿Necesitas ayuda o tienes una pregunta? Contactanos: <br>
+                        <a href="mailto:#0" class="footer__mail-link">kcandres21@gmail.com</a>
+                    </p>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="col-full ss-copyright">
+            <span>&copy; Copyright AndSoft 2023</span>
+            <span>Design by <a href="https://www.styleshout.com/">styleshout</a></span>
+        </div>
+
+    </div> <!-- end footer__bottom -->
+
+    <div class="go-top">
+        <a class="smoothscroll" title="Back to Top" href="#top"></a>
+    </div>
+
+</footer>
+<!-- end s-footer -->
 
 {% endblock %}

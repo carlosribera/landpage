@@ -1,15 +1,23 @@
 from django import forms
 
-from myapp.models import Portfolio
+from myapp.models import Portfolio,About,Services
 
-class createNewItemAbout(forms.Form):
-    title = forms.CharField(label="Titulo", max_length=100, widget=forms.TextInput(attrs={'class': 'input'}))
-    description = forms.CharField(label="Descripcion", widget=forms.Textarea(attrs={'class':'input'}))
+class AboutForm(forms.ModelForm):
+    class Meta:
+        model = About
+        fields = ['id', 'title', 'description']
 
-class createNewService(forms.Form):
-    icon = forms.CharField(label="Nombre del icono", max_length=200, widget=forms.TextInput(attrs={'class': 'input'}))
-    title = forms.CharField(label="Titulo", max_length=100, widget=forms.TextInput(attrs={'class': 'input'}))
-    description = forms.CharField(label="Descripcion del servicio", widget=forms.Textarea(attrs={'class':'input'}))
+    title = forms.CharField( widget=forms.TextInput(attrs={'class': 'form-control'}), max_length=100)
+    description = forms.CharField(widget=forms.Textarea(attrs={'class':'form-control'}), max_length=200)
+
+class ServiceForm(forms.ModelForm):
+    class Meta:
+        model = Services
+        fields = ['id', 'icon', 'title', 'description']
+
+    icon = forms.CharField( widget=forms.TextInput(attrs={'class': 'form-control'}), max_length=200)
+    title = forms.CharField(widget=forms.TextInput(attrs={'class': 'form-control'}), max_length=200)
+    description = forms.CharField( widget=forms.Textarea(attrs={'class':'form-control'}), max_length=200)
     
 class PortfolioForm(forms.ModelForm):
     class Meta:

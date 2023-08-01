@@ -37,7 +37,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'myapp'
+    'myapp.apps.MyappConfig'
 ]
 
 MIDDLEWARE = [
@@ -75,14 +75,24 @@ WSGI_APPLICATION = 'mysite.wsgi.application'
 # https://docs.djangoproject.com/en/4.2/ref/settings/#databases
 
 
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.mysql',
+#         'NAME': 'railway',
+#         'USER': 'root',
+#         'PASSWORD': '8TFY2jQL4ssWPonXD9Oi',
+#         'HOST': 'containers-us-west-196.railway.app',
+#         'PORT': '6181',
+#     }
+# }
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
         'NAME': 'railway',
         'USER': 'root',
-        'PASSWORD': '8TFY2jQL4ssWPonXD9Oi',
-        'HOST': 'containers-us-west-196.railway.app',
-        'PORT': '6181',
+        'PASSWORD': '',
+        'HOST': 'localhost',
+        'PORT': '',
     }
 }
 # DATABASES = {
