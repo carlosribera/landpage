@@ -26,7 +26,8 @@ SECRET_KEY = 'django-insecure-%bxed!!yf*f@z9b5n*)hqva=m#kpr($a56o9dq17=gn&skryz1
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['*']
+# ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['.vercel.app', '.now.sh', '127.0.0.1', 'localhost']
 
 
 # Application definition
@@ -38,7 +39,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'myapp.apps.MyappConfig'
+    'myapp'
 ]
 
 MIDDLEWARE = [
@@ -138,7 +139,6 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/4.2/howto/static-files/
 
-STATIC_URL = 'static/'
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field
@@ -153,12 +153,10 @@ EMAIL_HOST_USER = 'kcandres21@gmail.com'
 EMAIL_HOST_PASSWORD = 'wpuzmwfirywpizsq'
 EMAIL_USE_TLS = True
 
-STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static')]
-STATIC_ROOT =os.path.join(BASE_DIR, 'staticfiles')
 
-STATICFILES_DIR = [
-    BASE_DIR / "static"
-]
+STATIC_URL = 'static/'
+STATICFILES_DIRS = os.path.join(BASE_DIR, 'staticfiles'),
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles_build', 'static')
 
-MEDIA_ROOT = BASE_DIR / "files"
-MEDIA_URL = "/media-files/"
+MEDIA_URL = "img/"
+MEDIA_ROOT = BASE_DIR/"media"
