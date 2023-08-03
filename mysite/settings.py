@@ -158,5 +158,5 @@ STATIC_URL = 'static/'
 STATICFILES_DIRS = os.path.join(BASE_DIR, 'staticfiles'),
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles_build', 'static')
 
-MEDIA_URL = "img/"
+MEDIA_URL = "files/"
 MEDIA_ROOT = BASE_DIR/"media"
