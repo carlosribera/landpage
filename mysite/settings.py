@@ -155,7 +155,7 @@ EMAIL_HOST_PASSWORD = 'wpuzmwfirywpizsq'
 EMAIL_USE_TLS = True
 
 STATICFILES_DIRS = [
-    os.path.join(BASE_DIR , "static"),
+    os.path.join(BASE_DIR, "static"),
 ]
 
 MEDIA_ROOT = BASE_DIR / "files"
