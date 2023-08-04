@@ -26,7 +26,7 @@ DEBUG = True
 
 # ALLOWED_HOSTS = []
 ALLOWED_HOSTS = ['*']
-
+CSRF_TRUSTED_ORIGINS = ['https://landpage-production.up.railway.app/','https://*.127.0.0.1']
 # Application definition
 
 INSTALLED_APPS = [
