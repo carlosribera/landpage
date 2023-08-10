@@ -71,28 +71,13 @@
         </div>
     </div> <!-- end section-header -->
 
-    <div class="row wide about-desc" data-aos="fade-up">
-
-        <div class="col-full slick-slider about-desc__slider">
-
-            {% for about in abouts %}
-            <div class="about-desc__slide">
-                <h3 class="item-title">{{about.title}}</h3>
-                <p>{{about.description}}</p>
-            </div>
-            {% endfor %}
-
-        </div> <!-- end about-desc__slider -->
-
-    </div> <!-- end about-desc -->
-
 </section> <!-- end s-about -->
 
 
 
-<!-- about-how
+<!-- services
     ================================================== -->
-<section id="about-how" class="s-about-how">
+<section id="services" class="s-about-how">
 
     <div class="row">
         <div class="col-full video-bg" data-aos="fade-up">
@@ -124,145 +109,60 @@
             </div>
         </div> <!-- end video-bg -->
     </div>
-
-    <div class="row process-wrap">
-
-        <h2 class="display-2 text-center" data-aos="fade-up">Como trabajamos?</h2>
-
-        <div class="process" data-aos="fade-up">
-            <div class="process__steps block-1-2 block-tab-full group">
-
-                <div class="col-block step">
-                    <h3 class="item-title">Necesidades</h3>
-                    <p>Lo primero es escuchar atentamente al cliente y comprender sus requisitos y expectativas para el
-                        software. Realiza reuniones iniciales y entrevistas para aclarar todas las especificaciones y
-                        objetivos del proyecto.
-                    </p>
-                </div>
-
-                <div class="col-block step">
-                    <h3 class="item-title">comunicación clara</h3>
-                    <p>Mantén una comunicación abierta y transparente con el cliente en todo momento. Utiliza diferentes
-                        canales de comunicación, como reuniones presenciales, correos electrónicos o llamadas
-                        telefónicas, para mantenerlos informados sobre el progreso del proyecto y para obtener
-                        retroalimentación regular.
-                    </p>
-                </div>
-
-                <div class="col-block step">
-                    <h3 class="item-title">Documentar los requisitos</h3>
-                    <p>Es fundamental documentar todos los requisitos acordados en un documento formal, como un alcance
-                        del proyecto o una propuesta técnica. Esto asegura que ambos estén alineados y tengan una
-                        referencia clara durante todo el proceso de desarrollo.
-                    </p>
-                </div>
-
-                <div class="col-block step">
-                    <h3 class="item-title">Establecermos plazos claros</h3>
-                    <p>Divide el proyecto en hitos o etapas y establece plazos realistas para cada una. Esto ayudará a mantener el progreso en el camino correcto y permitirá al cliente ver el avance de manera incremental.
-                    </p>
-                </div>
-
-                <div class="col-block step">
-                    <h3 class="item-title">Mostramos prototipos y avances tempranos</h3>
-                    <p>Si es posible, proporciona al cliente prototipos o versiones tempranas del software para que pueda visualizar y experimentar cómo se verá y funcionará. Esto facilita la retroalimentación temprana y ayuda a evitar sorpresas más adelante en el proceso.
-                    </p>
-                </div>
-
-                <div class="col-block step">
-                    <h3 class="item-title">Obtener retroalimentación y ajustar</h3>
-                    <p> Escucha atentamente la retroalimentación del cliente y realiza ajustes según sea necesario. Asegúrate de que las expectativas del cliente se cumplan y de que el software se ajuste a sus necesidades.
-                    </p>
-                </div>
-
-                <div class="col-block step">
-                    <h3 class="item-title">Probar exhaustivamente</h3>
-                    <p>Antes de entregar el producto final, realiza pruebas rigurosas para asegurarte de que el software sea estable, seguro y cumpla con los requisitos establecidos.
-                    </p>
-                </div>
-
-                <div class="col-block step">
-                    <h3 class="item-title">Ofrecemos soporte y capacitación</h3>
-                    <p>Después de entregar el software, proporciona soporte técnico y capacitación para el cliente, asegurándote de que comprendan cómo utilizar el software y estén satisfechos con el producto final.
-                    </p>
-                </div>
-
-            </div> <!-- end process__steps -->
-        </div> <!-- end process -->
-    </div> <!-- end about-how -->
-
-</section> <!-- end s-about-how -->
-
-<!-- services
-    ================================================== -->
-<section id="services" class="s-features target-section">
-
-    <div class="row section-header has-bottom-sep" data-aos="fade-up">
+    <br>
+    <div class="row section-header has-bottom-sep " data-aos="fade-up">
         <div class="col-full">
             <h1 class="display-1">
-                Pide tu software con las caracteristicas que desees.
+                Nuestros <strong>Servicios</strong>
             </h1>
             <p class="lead">
-                El objetivo fundamental es comprender las necesidades del cliente y desarrollar soluciones de software
-                que cumplan con sus requisitos específicos.
+                Diseñamos y creamos software centrados en las personas para encontrar soluciones y desarrollar negocios
             </p>
         </div>
     </div> <!-- end section-header -->
 
     <div class="row features block-1-3 block-m-1-2">
-
-
-        {% for service in services %}
-        <div class="col-block item-feature" data-aos="fade-up">
-            <div class="item-feature__icon">
-                <i class="icon-layers"></i>
-            </div>
+        <div class="col-block item-feature align-center" data-aos="fade-up">
+            <img src="{% static 'images/icons/softdev.08e61197.svg' %}">
             <div class="item-feature__text">
-                <h3 class="item-title">{{service.title}}</h3>
-                <p>{{service.description}}</p>
+                <h3 class="item-title">Desarrollo de Software a medida</h3>
             </div>
         </div>
-        {% endfor %}
-        <!--     
-                
-                        <i class="icon-upload"></i>
-                    
-                        <i class="icon-video-camera"></i>
-                        
-                        <i class="icon-shield"></i>
-                        
-                        <i class="icon-chat"></i>
-                        
-                        <i class="icon-wallet"></i>
-                        
-            -->
-</section>
-
-<!-- portfolio
-    ================================================== -->
-<section id="portfolio" class="s-download target-section">
-
-    <div class="row section-header align-center" data-aos="fade-up">
-        <div class="col-full">
-            <h1 class="display-1">
-                Únase a nuestra comunidad de más de 3,000,000 usuarios.
-            </h1>
-            <p class="lead">
-                Puedes ver Nuestros proyectos realizados con mayor demanda de mercado
-            </p>
+        <div class="col-block item-feature align-center" data-aos="fade-up">
+            <img src="{% static 'images/icons/mobiledev.1773f7bc.svg' %}">
+            <div class="item-feature__text">
+                <h3 class="item-title">Desarrollo móvil</h3>
+            </div>
         </div>
-    </div> <!-- end section-header -->
-
-    <div class="row" style="margin-bottom: 30px;">
-        <div class="col-full text-center">
-            <ul class="download-badges" data-aos="fade-up">
-                <li><a href="https://github.com/carlosribera" title="" class="badge-appstore">App Store</a></li>
-                <li><a href="#0" title="" class="badge-googleplay">Play Store</a></li>
-            </ul>
+        <div class="col-block item-feature align-center" data-aos="fade-up">
+            <img src="{% static 'images/icons/ecommerce.92d87914.svg' %}">
+            <div class="item-feature__text">
+                <h3 class="item-title">Desarrollo e-commerce</h3>
+            </div>
+        </div>
+        <div class="col-block item-feature align-center" data-aos="fade-up">
+            <img src="{% static 'images/icons/weblanding.f7619455.svg' %}">
+            <div class="item-feature__text">
+                <h3 class="item-title">Análisis de páginas web y aplicaciones</h3>
+            </div>
+        </div>
+        <div class="col-block item-feature align-center" data-aos="fade-up">
+            <img src="{% static 'images/icons/machinelearning.9f4afcfc.svg' %}">
+            <div class="item-feature__text">
+                <h3 class="item-title">Machine Learning & Inteligencia Artificial</h3>
+            </div>
+        </div>
+        <div class="col-block item-feature align-center" data-aos="fade-up">
+            <img src="{% static 'images/icons/remote.c581fd3c.svg' %}">
+            <div class="item-feature__text">
+                <h3 class="item-title">Ciberseguridad para trabajo remoto</h3>
+            </div>
         </div>
     </div>
+</section> <!-- end s-about-how -->
 
-</section> <!-- end s-download -->
+
+
 
 <section id="home" class="s-home target-section" data-parallax="scroll"
     data-image-src="{% static 'images/hero-bg.jpg' %}" data-natural-width=3000 data-natural-height=2000
