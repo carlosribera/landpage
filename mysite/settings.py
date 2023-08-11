@@ -156,6 +156,6 @@ EMAIL_HOST_USER = 'kcandres21@gmail.com'
 EMAIL_HOST_PASSWORD = 'wpuzmwfirywpizsq'
 EMAIL_USE_TLS = True
 
-
-MEDIA_ROOT = BASE_DIR / "files"
-MEDIA_URL = "/media-files/"
+# urls para archivos media de base de datos
+MEDIA_URL = "/media/"
+MEDIA_ROOT = os.path.join(BASE_DIR , "media")
