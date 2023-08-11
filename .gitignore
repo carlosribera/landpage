@@ -1,3 +1,4 @@
 db.sqlite3
 .env
 _pycache_
+mysite/__pycache__/
