@@ -30,7 +30,7 @@ class PortfolioForm(forms.ModelForm):
 
 
 class NewContact(forms.Form):
-    name = forms.CharField( max_length=200, widget=forms.TextInput(attrs={'class': 'input', 'type': 'text','placeholder':"Nombre"}))
-    email = forms.CharField( max_length=200, widget=forms.TextInput(attrs={'class': 'input', 'type': 'email', 'placeholder':'Correo electronico'}))
-    subject = forms.CharField( widget=forms.Textarea(attrs={'class':'input', 'type': 'text', 'placeholder':"Asunto"}))
-    message = forms.CharField( widget=forms.Textarea(attrs={'class':'input', 'type': 'text', 'placeholder':"Mensaje"}))
+    name = forms.CharField(label="", max_length=200, widget=forms.TextInput(attrs={'class': 'input', 'type': 'text','placeholder':"Nombre"}))
+    email = forms.CharField(label="", max_length=200, widget=forms.TextInput(attrs={'class': 'input', 'type': 'email', 'placeholder':'Correo electronico'}))
+    subject = forms.CharField(label="", widget=forms.Textarea(attrs={'class':'input', 'type': 'text', 'placeholder':"Asunto"}))
+    message = forms.CharField(label="", widget=forms.Textarea(attrs={'class':'input', 'type': 'text', 'placeholder':"Mensaje"}))
