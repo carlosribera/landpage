@@ -170,33 +170,32 @@
 
     <div class="shadow-overlay"></div>
 
-    <div class="home-content">
+    <div class="portfolio-content">
 
         {% for portfolio in portfolios %}
-        <div class="row home-content__main">
+        <div class="row portfolio-content__main">
 
-            <div class="home-content__left">
+            <div class="portfolio-content__left">
                 <h1>{{portfolio.title}}</h1>
 
                 <h3>{{portfolio.description}}</h3>
 
-                <div class="home-content__btn-wrap">
-                    <a href="#download" class="btn btn--primary home-content__btn smoothscroll">
+                <div class="portfolio-content__btn-wrap">
+                    <a href="#download" class="btn btn--primary portfolio-content__btn smoothscroll">
                         Mas detalles
                     </a>
                 </div>
-            </div> <!-- end home-content__left-->
+            </div> <!-- end portfolio-content__left-->
 
-            <div class="home-content__right">
-                <img src="{{portfolio.image.url}}" srcset="{{portfolio.image.url}} 1x, {{portfolio.image.url}} 2x">
-            </div> <!-- end home-content__right -->
+            <div class="portfolio-content__right" style="background-image: url({{portfolio.image.url}})">
+            </div> <!-- end portfolio-content__right -->
 
-        </div> <!-- end home-content__main -->
+        </div> <!-- end portfolio-content__main -->
 
         {% endfor %}
-    </div> <!-- end home-content -->
+    </div> <!-- end portfolio-content -->
 
-</section> <!-- end s-home -->
+</section> <!-- end s-portfolio -->
 
 
 <!-- footer================================================= -->

@@ -4094,3 +4094,113 @@ html.no-csstransitions .home-content__main {
 }
 
 /*# sourceMappingURL=main.css.map */
+
+
+
+
+
+.portfolio-content {
+  width: 70%;
+  max-width: 1200px;
+  margin: auto;
+  padding: 40px 0;
+}
+
+.portfolio-content__main {
+  min-height: 200px;
+  padding: 20px;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  gap: 20px;
+}
+
+.portfolio-content__left {
+  width: 70%;
+  min-width: 100px;
+  position: relative;
+}
+
+.portfolio-content h1 {
+  font-family: "Chivo", sans-serif;
+  font-weight: 600;
+  font-size: 5.2rem;
+  line-height: 1.222;
+  color: #ffffff;
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-top: 3.2rem;
+  position: relative;
+}
+
+.portfolio-content h1::before {
+  display: block;
+  content: "";
+  height: 2px;
+  width: 8rem;
+  background-color: #5b4f96;
+  position: absolute;
+  left: 8px;
+  top: 0;
+}
+
+.portfolio-content h3 {
+  font-family: "Nunito Sans", sans-serif;
+  font-weight: 300;
+  font-size: 2.2rem;
+  line-height: 1.667;
+  font-style: normal;
+  color: rgba(255, 255, 255, 0.3);
+  margin-top: 2rem;
+  width: 85%;
+}
+
+.portfolio-content__right {
+  width: 30%;
+  border-radius: 10px;
+  min-width: 300px;
+  min-height: 300px;
+  padding: 20px;
+  position: relative;
+  overflow: hidden;
+  background-size: cover;
+  background-position: center center;
+}
+
+@media screen and (max-width:1000px) {
+
+  .portfolio-content {
+      width: 70%;
+      max-width: 900px;
+      margin: auto;
+      padding: 40px 0;
+  }
+
+  .portfolio-content__main {
+      display: block;
+      min-height: 200px;
+      padding: 20px;
+      position: relative;
+      overflow: hidden;
+      width: 90%;
+      gap: 20px;
+  }
+
+  .portfolio-content__left {
+      width: 100%;
+      min-width: 100px;
+      position: relative;
+  }
+
+  .portfolio-content__right {
+      width: 100%;
+      border-radius: 10px;
+      min-width: 200px;
+      min-height: 200px;
+      padding: 20px;
+      position: relative;
+      overflow: hidden;
+      background-size: cover;
+      background-position: center center;
+  }
+}
