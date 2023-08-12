@@ -1,5 +1,5 @@
-from .models import About, Services, Portfolio
-from .form import PortfolioForm, NewContact,AboutForm,ServiceForm
+from .models import Portfolio
+from .form import PortfolioForm, NewContact
 from django.shortcuts import render, redirect
 from django.urls import reverse, reverse_lazy
 from django.views import View
@@ -13,13 +13,9 @@ from django.contrib.auth import logout
 
 # Create your views here.
 def index(request):
-    abouts = About.objects.all()
-    services = Services.objects.all()
     portfolios = Portfolio.objects.all()
     if request.method == 'GET':
         return render(request, 'index.html', {
-            'abouts' : abouts,
-            'services' : services,
             'portfolios' : portfolios,
             'form': NewContact
         })
@@ -54,65 +50,10 @@ def salir(request):
 
 @login_required
 def administrador(request):
-    abouts = About.objects.all()
-    services = Services.objects.all()
     portfolios = Portfolio.objects.all()
     return render(request, 'admin/administrador.html',{
-        'abouts' : abouts,
-        'services' : services,
         'portfolios' : portfolios
     })
-
-class List_abouts(View):
-    def get(self, request):
-        abouts = About.objects.all()
-        return render(request,'admin/about/index.html',{'abouts' : abouts})
-
-class Create_about(CreateView):
-    model = About
-    form_class = AboutForm
-    template_name = 'admin/about/add_about.html'
-
-    def get_success_url(self):
-        return reverse('about')
-
-class Update_about(UpdateView):
-    model = About
-    form_class = AboutForm
-    template_name='admin/about/add_about.html'
-    success_url = reverse_lazy('about')
-
-class Delete_about(DeleteView):
-    model = About
-    success_url = reverse_lazy("about")
-
-
-
-class List_services(View):
-    def get(self, request):
-        services = Services.objects.all()
-        return render(request,'admin/service/index.html',{'services' : services})
-    
-class Create_service(CreateView):
-    model = Services
-    form_class = ServiceForm
-    template_name = 'admin/service/add_service.html'
-
-    def get_success_url(self):
-        return reverse('service')
-
-class Update_service(UpdateView):
-    model = Services
-    form_class = ServiceForm
-    template_name='admin/service/add_service.html'
-    success_url = reverse_lazy('service')
-
-class Delete_service(DeleteView):
-    model = Services
-    success_url = reverse_lazy("service")
-
-
-
 
 class List_portfolios(View):
     def get(self, request):

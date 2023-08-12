@@ -12,49 +12,6 @@
 </div>
 
 
-
-<!-- About================================================== -->
-<div class="container px-4 py-5" id="featured-3">
-    <h2 class="pb-2 border-bottom">Acerca de Nuestra empresa</h2>
-    <div class="row g-4 py-5 row-cols-1 row-cols-lg-3">
-
-        {% for about in abouts %}
-        <div class="card" style="width: 18rem;">
-            <div class="card-body">
-                <h5 class="card-title">{{about.title}}</h5>
-                <p class="card-text">{{about.description}}</p>
-                <a href="{% url 'edit-about' about.id %}" class="btn btn-warning">Editar</a>
-                <a href="{% url 'delete-about' about.id %}" class="btn btn-danger">Eliminar</a>
-            </div>
-        </div>
-        {% endfor %}
-    </div>
-</div>
-
-
-
-
-<!-- services
-    ================================================== -->
-<div class="container px-4 py-5" id="featured-3">
-    <h2 class="pb-2 border-bottom">Servicios que ofrecemos</h2>
-    <div class="row g-4 py-5 row-cols-1 row-cols-lg-3">
-
-        {% for service in services %}
-        <div class="card" style="width: 18rem;">
-            <div class="card-body">
-                <h5 class="card-title">{{service.title}}</h5>
-                <p class="card-text">{{service.description}}</p>
-                <p class="card-text">{{service.icon}}</p>
-                <a href="{% url 'edit-service' service.id %}" class="btn btn-warning">Editar</a>
-                <a href="{% url 'delete-service' service.id %}" class="btn btn-danger">Eliminar</a>
-            </div>
-        </div>
-        {% endfor %}
-    </div>
-</div>
-
-
 <!-- Portfolio ================================================== -->
 <div class="container px-4 py-5" id="featured-3">
     <h2 class="pb-2 border-bottom">Portafolio de la empresa</h2>
