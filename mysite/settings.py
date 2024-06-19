@@ -80,7 +80,7 @@ DATABASES = {
         'NAME': 'railway',
         'USER': 'postgres',
         'PASSWORD': 'AhKs7tWxVdkOykBke2Fo',
-        'HOST': 'roundhouse.proxy.rlwy.net',
+        'HOST': 'postgres.railway.internal',
         'PORT': '49491',
     }
 }
